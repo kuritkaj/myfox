@@ -12,9 +12,13 @@
     "includedScripts": []
   },
   "dependencies": {
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "react-router-dom": "6.29.0"
+    "@apollo/client": "^4.0.5",
+    "antd": "^5.27.4",
+    "dayjs": "^1.11.18",
+    "graphql": "^16.11.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.29.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
