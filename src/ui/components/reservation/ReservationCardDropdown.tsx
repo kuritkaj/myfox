@@ -3,7 +3,7 @@ import { MenuProps } from "antd";
 import { Reservation } from "../../../domain/models";
 import { CardActionDropdown } from "../card/CardActionDropdown";
 
-function createReservationUrl(alias?: string) {
+function createReservationUrl(alias?: string | null) {
   return alias ? `https://${alias}.snippet-test.myfox.cz/form/show` : undefined;
 }
 

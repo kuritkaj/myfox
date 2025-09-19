@@ -1,10 +1,10 @@
 import { Reservation } from '../../../domain/models';
-import React, { useMemo } from 'react';
+import React from 'react';
 import { Empty } from 'antd';
 import ReservationCard from './ReservationCard';
 
 interface ReservationListProps {
-  reservations: Reservation[],
+  reservations: Reservation[];
 }
 export const ReservationList = React.memo(({ reservations }: ReservationListProps) => {
   if (!reservations.length) {

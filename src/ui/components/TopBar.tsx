@@ -1,11 +1,10 @@
-import { MenuOutlined } from "@ant-design/icons";
-import { Avatar, Dropdown, Layout, Space, Typography } from "antd";
-import { Link, useLocation } from "react-router-dom";
+import { MenuOutlined } from '@ant-design/icons';
+import { Avatar, Dropdown, Layout, Space, Typography } from 'antd';
+import { Link } from 'react-router-dom';
 
 const { Header } = Layout;
 
 export default function TopBar() {
-  const loc = useLocation();
   const items = [
     { key: "res", label: <Link to="/">Moje rezervace</Link> },
     { key: "me",  label: <Link to="/me">Osobní údaje</Link> },

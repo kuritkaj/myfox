@@ -1,20 +1,24 @@
-import { useQuery, useMutation } from "@apollo/client/react";
-import { GET_CUSTOMER, UPDATE_CUSTOMER } from "../../infrastructure/graphql/documents";
-import { CUSTOMER_ID } from "../../infrastructure/utils/env";
+import { useMutation, useQuery } from '@apollo/client/react';
+import {
+  GET_CUSTOMER,
+  UPDATE_CUSTOMER,
+} from '../../infrastructure/graphql/documents';
+import { CUSTOMER_ID } from '../../infrastructure/utils/env';
 import {
   CustomerUpdateInput,
   GetCustomerResult,
 } from '../../infrastructure/graphql/types';
-import { Customer } from '../../domain/models';
 import { mapApiCustomerToCustomer } from '../../infrastructure/mappers/customerMapper';
 
 export function useCustomer() {
-  const {loading, error, data} = useQuery<GetCustomerResult>(GET_CUSTOMER, { variables: { id: CUSTOMER_ID } });
+  const { loading, error, data } = useQuery<GetCustomerResult>(GET_CUSTOMER, {
+    variables: { id: CUSTOMER_ID },
+  });
 
   return {
     loading,
     error,
-    customer: mapApiCustomerToCustomer(data?.getCustomer)
+    customer: mapApiCustomerToCustomer(data?.getCustomer),
   };
 }
 
